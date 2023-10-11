@@ -1,0 +1,22 @@
+__pycache__/
+bin/
+test/
+tmp/
+personal/
+
+temp*
+
+# c extensions
+*.so
+
+# envirionments
+.env
+.venv
+env/
+venv/
+ENV/
+
+*.bak
+*.old
+
+
