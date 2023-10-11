@@ -1,8 +1,11 @@
 # vpn_systray
 
-This is a systray app for VPN apps.
+This is a systemtray GUI app for VPNs.
+
+Since VPN companies do not provide GUI VPN apps for Linux, I implemented a simple GUI.
 Currently, this app only supports the fundamental function of Nord VPN.
-Other VPN and functionality may be implemented in the future.
+
+Other VPN companies and functionality may be implemented in the future.
 
 # LICENCE
 
@@ -16,4 +19,4 @@ followings are modified logo
 * vpn_off.png
 * vpn_err.png
 
-other logos are public domain. made by me.
+Other logos are public domain. Made by me.
