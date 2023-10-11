@@ -2,7 +2,7 @@
 
 
 
-#LICENCE
+# LICENCE
 
 ## Icon Attribution
 <a href="https://www.flaticon.com/free-icons/vpn" title="vpn icons">Vpn icons created by Secret Studio - Flaticon</a>
