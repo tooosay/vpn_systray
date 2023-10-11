@@ -1,8 +1,8 @@
 # vpn_systray
 
-This is a systray app for VPN apps.
-Currently, this app only supports the fundamental function of Nord VPN.
-Other VPN and functionality may be implemented in the future.
+This is systray app for vpn apps.
+As of now, this app only supports very basic function of nordvpn.
+other vpn and functionality would be implemented in some future.
 
 # LICENCE
 
