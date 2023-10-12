@@ -11,6 +11,7 @@ class VPN(VPNClientInterface):
         self.server = ""
         if provider == "nordvpn":
             self.vpn = NordVPN()
+
     
     def connect(self):
         self.vpn.connect(server=self.server)
@@ -33,6 +34,11 @@ class VPN(VPNClientInterface):
             systray.setIcon(self.err)
             print("something went wrong")
         
+    def list_servers(self)->[]:
+        return self.vpn.serverlist
+    
+    def setServer(self, server):
+        self.server = server
 
     def change_provider(self, provider):
         if self.provider == provider:

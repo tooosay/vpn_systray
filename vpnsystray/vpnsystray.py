@@ -1,6 +1,6 @@
 # import vpn
 import sys
-from PySide6.QtWidgets import QApplication, QSystemTrayIcon, QMenu
+from PySide6.QtWidgets import QApplication, QSystemTrayIcon, QMenu, QComboBox, QWidgetAction
 from PySide6.QtGui import QIcon, QAction
 import os
 from vpn import VPN
@@ -15,7 +15,6 @@ def vpnsystray(on_icon_path, off_icon_path, err_icon_path):
     off_icon = QIcon(off_icon_path)
     err_icon = QIcon(err_icon_path)
     vpn = VPN(provider, on_icon, off_icon, err_icon)
-
     tray = QSystemTrayIcon()
     vpn.reflect_status(tray)
 
@@ -24,10 +23,10 @@ def vpnsystray(on_icon_path, off_icon_path, err_icon_path):
     menu = QMenu()
     menu_build(menu, vpn, tray)
 
-
     QUIT = QAction("Quit", menu)
     QUIT.triggered.connect(app.quit)
     menu.addAction(QUIT)
+
     tray.setContextMenu(menu)
     sys.exit(app.exec())
 
@@ -45,6 +44,14 @@ def menu_build(menu: QMenu, vpn, systray):
 
     menu.addAction(connect)
     menu.addAction(disconnect)
+
+def update_vpn_server(server, vpn):
+    # Handle updating VPN settings based on the selected server
+    if server != "not selected":
+        vpn.set_server(server)
+        vpn.connect()  # You might have a connect method in your VPN class
+    else:
+        vpn.disconnect()  # Disconnect if "not selected" is chosen
 
 def main():
     dir_name = os.path.dirname(os.getcwd()) + "/icons/"

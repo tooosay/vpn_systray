@@ -17,3 +17,4 @@ class VPNClientInterface(metaclass=abc.ABCMeta):
     def connected(self):
         raise NotImplementedError()
     
+    
